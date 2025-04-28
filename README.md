@@ -14,3 +14,20 @@ __1.4M letters of kafka's books__
 > An Imperial Message
 
 > Description of a Struggle
+
+# Model
+
+<img src="resrc\model_summary_text.png">
+
+# Train
+
+## Hyper parameters
+    Embedding Dimension : 64
+    hidden size : 64
+    layer number : 32
+
+    Epoch : 150
+    Batch size : 32
+    Learning rate : 2e-3 ~ 1e-6 (Use LambdaLR schedular)
+
+<img src="resrc\epoch150_.png">
