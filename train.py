@@ -26,7 +26,7 @@ def Train(data_split : tuple, epoch=10, lr=1e-4, batch_size=5) :
     train_len = int(len(all_Dataset) * data_split[0])
     valid_len = int(len(all_Dataset) * data_split[1]) + 1
 
-    train_dataset, valid_dataset = data.random_split(all_Dataset, (train_len, valid_len))
+    train_dataset, valid_dataset = random_split(all_Dataset, (train_len, valid_len))
 
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     valid_dataloader = DataLoader(valid_dataset, shuffle=True)

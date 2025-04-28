@@ -1,7 +1,4 @@
-import torch
-import torch.nn as nn
-import data
-from data import all_letters
+from utils import *
 
 class Writer_classifi(nn.Module) :
     def __init__(self, *, embd_n, hidden_size=6, layer_n=1):

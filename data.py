@@ -1,28 +1,4 @@
-import torch
-import string
-import torch
-import os
-from torch.utils.data import Dataset, random_split, DataLoader
-from torch.nn.functional import one_hot
-
-
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-writer_list = ['kafka', 'goethe', 'hesse']
-
-all_letters = string.ascii_letters + '.;: "\''
-n_letters = len(all_letters)
-
-
-def Line2tensor(lines : str) -> torch.Tensor:
-    idx_list = []
-    for text in lines :
-        idx_list.append(all_letters.find(text))
-    return idx_list
-
-def text2tensor(address : str) -> torch.tensor :
-    with open(address, encoding='utf-8') as file :
-        raw_text = Line2tensor(''.join([text for text in file.read() if text in all_letters]))
-    return raw_text
+from utils import *
 
 class text_dataset(Dataset) :
     def __init__(self, addr_l, split_n):
@@ -49,12 +25,3 @@ class text_dataset(Dataset) :
 
     def __getitem__(self, index):
         return self.process_x[index], self.process_y[index]
-
-if __name__ == "__main__" :
-    test_data = text_dataset([
-    "data\goethe.txt",
-    "data\hesse.txt",
-    "data\kafka.txt"
-    ], 100)
-    print(test_data.process_y.shape)
-

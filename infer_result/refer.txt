@@ -1,0 +1,4 @@
+Inference text 1 : "text1"
+    |   goethe : 93.3%
+    |   hesse  : 2.2%
+    |   kafka  : 4.5%
