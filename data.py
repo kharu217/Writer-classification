@@ -52,9 +52,9 @@ class text_dataset(Dataset) :
 
 if __name__ == "__main__" :
     test_data = text_dataset([
-    "Writer_classification\data\goethe.txt",
-    "Writer_classification\data\hesse.txt",
-    "Writer_classification\data\kafka.txt"
+    "data\goethe.txt",
+    "data\hesse.txt",
+    "data\kafka.txt"
     ], 100)
     print(test_data.process_y.shape)
 

@@ -5,7 +5,7 @@ from utils import *
 from model import *
 
 
-def infer(text : str, model_addr = "Writer_classification\models\writer_model.h5") :
+def infer(text : str, model_addr = "models\writer_model.h5") :
     infer_token = data.Line2tensor(''.join(i for i in text if i in all_letters))
     infer_tensor = torch.tensor(infer_token)
 
