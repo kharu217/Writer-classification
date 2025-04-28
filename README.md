@@ -31,3 +31,17 @@ __1.4M letters of kafka's books__
     Learning rate : 2e-3 ~ 1e-6 (Use LambdaLR schedular)
 
 <img src="resrc\epoch150_.png">
+
+# Result
+
+## Testing with each writer's work
+
+Hermann Hesse - Journey to the East
+<img src="resrc\hesse_journey.png">
+
+Goethe - The Sorrows of Young Werther
+<img src="resrc\goethe_werther.png">
+
+Kafka - Metamorphosis
+<img src="resrc\kafka_metapho.png"> 
+
